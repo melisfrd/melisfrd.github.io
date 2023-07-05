@@ -1,0 +1,146 @@
+header {
+  background: url(../img/bg.jpg) center/cover;
+  .container {
+    background-color: $color0o;
+    min-height: 100vh;
+    @include center;
+    flex-direction: column;
+
+    .text, .socials {
+      width: 60%;
+
+      @media screen and (max-width: 1050px) {
+        width: 80%;
+      }
+    }
+
+    .text {
+      text-align: center;
+      font-size: 1.5rem;
+
+      .title {
+        h1 {
+          span {
+            font-weight: lighter;
+            font-size: 1.5rem;
+          }
+        }
+
+        p {
+          position: relative;
+          &::after {
+            content: '';
+            width: 20%;
+            height: 4px;
+            background-color: $color2o;
+            opacity: 0.7;
+            position: absolute;
+            bottom: 2px;
+            left: 44%;
+          }
+        }
+      }
+      .paragraph {
+        padding: 50px 0 100px;
+        line-height: 40px;
+        position: relative;
+
+        &::after {
+          content: '';
+          width: 30%;
+          height: 5px;
+          background-color: $color2;
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .socials {
+      padding-top: 50px;
+      margin: 0 auto;
+      width: 10%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        
+        li {
+          list-style: none;
+
+          a {
+            font-size: 2rem;
+            color: $color1;
+            transition: 0.1s ease-in-out;
+
+            &:hover {
+              font-size: 1.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    // RESPONSIVE MEDIUM ***********
+    @media screen and (max-width: 960px) and (max-height: 540px) {
+      .text {
+        .title {
+          font-size: 1rem;
+  
+          h1 {
+            font-size: 1.5rem;
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+        .paragraph {
+          font-size: 1rem;
+        }
+      }
+      .socials {
+        ul li a {
+              font-size: 1rem;
+            }
+          }
+    }
+
+    // RESPONSIVE MOBILE ***********
+    @media screen and (max-width: 480px) and (max-height: 854px) {
+
+      .text {
+        width: 95%;
+        .title {
+          font-size: 1rem;
+  
+          h1 {
+            font-size: 1.5rem;
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+        .paragraph {
+          text-align: justify;
+          font-size: 1rem;
+          line-height: 30px;
+        }
+      }
+      .socials {
+        width: 20%;
+        ul li a {
+          font-size: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 320px){
+      .text .paragraph {
+        padding-bottom: 30px;
+      }
+      .socials {
+        padding-top: 30px;
+      }
+    }
+  }
+}

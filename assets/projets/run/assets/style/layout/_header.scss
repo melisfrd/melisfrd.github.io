@@ -1,0 +1,56 @@
+header {
+  .container {
+    height: 100vh;
+    display: flex;
+    
+    .txt, .img {
+      width: 50%;
+    }
+
+    .txt {
+      @include center;
+      .content {
+        padding: 0 60px;
+        line-height: 50px;
+        font-weight: 300;
+        h1 {
+          font-weight: 300;
+        }
+        p {
+          margin: 30px 0;
+          font-weight: 300;
+        }
+      }
+    }
+    .img {
+      background: url(../img/banner.jpg) right/cover;
+    }
+
+    // responsive
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+
+      .txt, .img {
+        height: 50%;
+        width: 100%;
+      }
+      .txt {
+        font-size: 1rem;
+        .content {
+          padding: 0 20px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      
+      .txt {
+        .content {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

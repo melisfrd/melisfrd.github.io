@@ -1,0 +1,74 @@
+footer {
+  @include center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: $color3;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .container {
+    height: 25vh;
+    width: 70%;
+    @include center;
+
+    ul {
+      width: 70%;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        list-style: none;
+        border: 1px solid $color3;
+        border-radius: 200px;
+        height: 70px;
+        width: 70px;
+        @include center;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          border: 1px solid $color2;
+          a {
+            color: $color2;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: $color0;
+          height: 100%;
+          width: 100%;
+          @include center;
+
+          i {
+            padding: 20px;
+          }
+        }
+      }
+
+
+    }
+    // responsive
+
+    @media screen and (max-width: 480px) {
+      width: 95%;
+
+      ul {
+        width: 100%;
+
+        li {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    margin: 30px 0;
+  }
+}

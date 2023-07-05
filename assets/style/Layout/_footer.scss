@@ -1,0 +1,45 @@
+footer {
+  margin-top: 10px;
+  height: 10vh;
+  background-color: $color0;
+  @include center;
+
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+
+    div {
+      width: 50%;
+      text-align: center;
+
+      ul {
+        margin: 0 auto;
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          list-style: none;
+
+          a {
+            color: $color1;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+              color: $color2;
+            }
+          }
+        }
+      }
+    }
+
+    // RESPONSIVE MOBILE
+    @media screen and (max-width: 480px) and (max-height: 854px) {
+      width: 100%;
+      .right ul {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;800&display=swap');
+
+$font: 'Inter', sans-serif;
+
+$color0: #0f0f0f;
+$color1: rgb(240, 240, 240);
+$color2: rgb(73, 26, 26);
+$color3: lightgrey;
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: $font;
+  font-size: 1.5rem;
+
+  button {
+    border: 1px solid $color3;
+    border-radius: 200px;
+    background-color: transparent;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $color2;
+      color: $color2;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 10px 15px;
+      font-size: 0.7rem;
+    }
+  }
+}

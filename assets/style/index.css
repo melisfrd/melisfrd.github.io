@@ -1,0 +1,337 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  color: #f2f2f2;
+}
+
+header {
+  background: url(../img/bg.jpg) center/cover;
+}
+header .container {
+  background-color: rgba(0, 0, 0, 0.712);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+header .container .text, header .container .socials {
+  width: 60%;
+}
+@media screen and (max-width: 1050px) {
+  header .container .text, header .container .socials {
+    width: 80%;
+  }
+}
+header .container .text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+header .container .text .title h1 span {
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+header .container .text .title p {
+  position: relative;
+}
+header .container .text .title p::after {
+  content: "";
+  width: 20%;
+  height: 4px;
+  background-color: rgba(250, 209, 147, 0.753);
+  opacity: 0.7;
+  position: absolute;
+  bottom: 2px;
+  left: 44%;
+}
+header .container .text .paragraph {
+  padding: 50px 0 100px;
+  line-height: 40px;
+  position: relative;
+}
+header .container .text .paragraph::after {
+  content: "";
+  width: 30%;
+  height: 5px;
+  background-color: rgb(250, 209, 147);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+header .container .socials {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 10%;
+}
+header .container .socials ul {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .socials ul li {
+  list-style: none;
+}
+header .container .socials ul li a {
+  font-size: 2rem;
+  color: #f2f2f2;
+  transition: 0.1s ease-in-out;
+}
+header .container .socials ul li a:hover {
+  font-size: 1.9rem;
+}
+@media screen and (max-width: 960px) and (max-height: 540px) {
+  header .container .text .title {
+    font-size: 1rem;
+  }
+  header .container .text .title h1 {
+    font-size: 1.5rem;
+  }
+  header .container .text .title h1 span {
+    font-size: 1rem;
+  }
+  header .container .text .paragraph {
+    font-size: 1rem;
+  }
+  header .container .socials ul li a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) and (max-height: 854px) {
+  header .container .text {
+    width: 95%;
+  }
+  header .container .text .title {
+    font-size: 1rem;
+  }
+  header .container .text .title h1 {
+    font-size: 1.5rem;
+  }
+  header .container .text .title h1 span {
+    font-size: 1rem;
+  }
+  header .container .text .paragraph {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+  header .container .socials {
+    width: 20%;
+  }
+  header .container .socials ul li a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  header .container .text .paragraph {
+    padding-bottom: 30px;
+  }
+  header .container .socials {
+    padding-top: 30px;
+  }
+}
+
+#experiences {
+  background-color: black;
+  padding: 50px 30px;
+  border-top: 5px solid rgb(250, 209, 147);
+}
+#experiences .container {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#experiences .container .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#experiences .container .content .xp {
+  border-top: 1px solid #f2f2f2;
+  padding: 30px 0;
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+#experiences .container .content .xp span {
+  background-color: rgb(250, 209, 147);
+  color: black;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding: 0 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 960px) and (max-height: 540px) {
+  #experiences {
+    padding: 50px 10px;
+  }
+  #experiences .container .content .xp h3 {
+    font-size: 0.9rem;
+  }
+  #experiences .container .content .xp p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) and (max-height: 854px) {
+  #experiences .container .content {
+    flex-direction: column;
+  }
+  #experiences .container .content .xp {
+    width: 100%;
+  }
+  #experiences .container .content .xp:nth-child(2) {
+    margin: 70px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  #experiences {
+    padding: 50px 10px;
+  }
+  #experiences .container .content .xp h3 {
+    font-size: 0.8rem;
+  }
+  #experiences .container .content .xp p {
+    font-size: 0.7rem;
+  }
+}
+
+#projects {
+  background-color: black;
+  padding: 50px 30px;
+  position: relative;
+}
+#projects::before {
+  content: "";
+  width: 30%;
+  height: 5px;
+  background-color: rgba(250, 209, 147, 0.753);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#projects .container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#projects .container .swipe {
+  font-size: 2.2rem;
+  color: #f2f2f2;
+}
+#projects .container .swipe i:hover {
+  cursor: pointer;
+}
+#projects .container .swipe i:active {
+  font-size: 2rem;
+}
+#projects .container .content {
+  border: 1px solid #f2f2f2;
+  margin: 0 70px;
+  width: 700px;
+  white-space: nowrap;
+  font-size: 0;
+  overflow: hidden;
+}
+#projects .container .content .project {
+  width: 100%;
+  height: 400px;
+  display: inline-block;
+}
+#projects .container .content .project a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: black;
+  -webkit-backdrop-filter: grayscale(90%);
+          backdrop-filter: grayscale(90%);
+}
+#projects .container .content .run {
+  background: url(../img/run.png) center/cover;
+}
+#projects .container .content .shifumi {
+  background: url(../img/shifumi.png) center/cover;
+}
+@media screen and (max-width: 480px) and (max-height: 854px) {
+  #projects {
+    padding: 30px 5px 0;
+  }
+  #projects .container .swipe {
+    display: none;
+  }
+  #projects .container .content {
+    border: none;
+    width: 300px;
+    margin: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+  #projects .container .content .project {
+    border: 2px solid #f2f2f2;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+  }
+  #projects .container .content .project a {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  margin-top: 10px;
+  height: 10vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+}
+footer .container div {
+  width: 50%;
+  text-align: center;
+}
+footer .container div ul {
+  margin: 0 auto;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+footer .container div ul li {
+  list-style: none;
+}
+footer .container div ul li a {
+  color: #f2f2f2;
+  transition: 0.2s ease-in-out;
+}
+footer .container div ul li a:hover {
+  color: rgb(250, 209, 147);
+}
+@media screen and (max-width: 480px) and (max-height: 854px) {
+  footer .container {
+    width: 100%;
+  }
+  footer .container .right ul {
+    width: 50%;
+  }
+}/*# sourceMappingURL=index.css.map */

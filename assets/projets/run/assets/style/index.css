@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;800&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+}
+body button {
+  border: 1px solid lightgrey;
+  border-radius: 200px;
+  background-color: transparent;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+body button:hover {
+  cursor: pointer;
+  border: 1px solid rgb(73, 26, 26);
+  color: rgb(73, 26, 26);
+}
+@media screen and (max-width: 480px) {
+  body button {
+    padding: 10px 15px;
+    font-size: 0.7rem;
+  }
+}
+
+header .container {
+  height: 100vh;
+  display: flex;
+}
+header .container .txt, header .container .img {
+  width: 50%;
+}
+header .container .txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container .txt .content {
+  padding: 0 60px;
+  line-height: 50px;
+  font-weight: 300;
+}
+header .container .txt .content h1 {
+  font-weight: 300;
+}
+header .container .txt .content p {
+  margin: 30px 0;
+  font-weight: 300;
+}
+header .container .img {
+  background: url(../img/banner.jpg) right/cover;
+}
+@media screen and (max-width: 480px) {
+  header .container {
+    flex-direction: column;
+  }
+  header .container .txt, header .container .img {
+    height: 50%;
+    width: 100%;
+  }
+  header .container .txt {
+    font-size: 1rem;
+  }
+  header .container .txt .content {
+    padding: 0 20px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  header .container .txt .content {
+    font-size: 0.8rem;
+  }
+}
+
+#articles .container {
+  height: 100vh;
+}
+#articles .container .article {
+  height: 50%;
+  display: grid;
+}
+#articles .container .article .txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 2px lightgrey;
+}
+#articles .container .article .txt .content {
+  padding: 0 50px;
+  line-height: 50px;
+  font-weight: 300;
+}
+#articles .container .article .txt .content h2 {
+  font-weight: 400;
+}
+#articles .container .article .txt .content p {
+  margin: 30px 0;
+}
+#articles .container .first {
+  grid-template-columns: 30% 70%;
+}
+#articles .container .first .img {
+  background: url(../img/img-left.jpg) center/cover;
+}
+#articles .container .second {
+  grid-template-columns: 70% 30%;
+}
+#articles .container .second .img {
+  background: url(../img/img-right.jpg) center/cover;
+}
+@media screen and (max-height: 640px) {
+  #articles .container .article {
+    font-size: 1rem;
+  }
+  #articles .container .article .txt .content {
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #articles .container .article {
+    grid-template-columns: 100%;
+  }
+  #articles .container .article .txt {
+    font-size: 1rem;
+  }
+  #articles .container .article .txt .content {
+    line-height: 20px;
+    padding: 0 20px;
+  }
+  #articles .container .article .txt .content p {
+    margin: 20px 0;
+  }
+  #articles .container .article .img {
+    display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  #articles .container .article .txt {
+    font-size: 0.8rem;
+  }
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .container {
+  width: 50%;
+  text-align: center;
+}
+#contact .container h2 {
+  margin: 30px 0;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .container form {
+  padding: 50px 0;
+  display: grid;
+  grid-template-areas: "a a b b" "c c c c" ". d d .";
+  gap: 10px;
+}
+#contact .container form div label {
+  display: block;
+  margin-bottom: 20px;
+}
+#contact .container form div input, #contact .container form div textarea {
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 15px;
+}
+#contact .container form div input {
+  height: 50px;
+}
+#contact .container form div textarea {
+  height: 300px;
+}
+#contact .container form .name {
+  grid-area: a;
+}
+#contact .container form .email {
+  grid-area: b;
+}
+#contact .container form .msg {
+  margin: 50px 0;
+  grid-area: c;
+}
+#contact .container form .submit {
+  grid-area: d;
+}
+@media screen and (max-width: 480px) {
+  #contact .container {
+    width: 95%;
+    font-size: 1rem;
+  }
+  #contact .container h2 {
+    font-weight: 300;
+  }
+  #contact .container form {
+    padding: 20px 0;
+    grid-template-areas: "a a a a" "b b b b" "c c c c" "c c c c" ". d d .";
+  }
+  #contact .container form .email {
+    margin: 20px 0;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+footer::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: lightgrey;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer .container {
+  height: 25vh;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+footer .container ul li {
+  list-style: none;
+  border: 1px solid lightgrey;
+  border-radius: 200px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+footer .container ul li:hover {
+  border: 1px solid rgb(73, 26, 26);
+}
+footer .container ul li:hover a {
+  color: rgb(73, 26, 26);
+}
+footer .container ul li a {
+  text-decoration: none;
+  color: #0f0f0f;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container ul li a i {
+  padding: 20px;
+}
+@media screen and (max-width: 480px) {
+  footer .container {
+    width: 95%;
+  }
+  footer .container ul {
+    width: 100%;
+  }
+  footer .container ul li {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    margin: 30px 0;
+  }
+}/*# sourceMappingURL=index.css.map */

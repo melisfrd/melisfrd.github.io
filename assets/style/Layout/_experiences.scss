@@ -1,0 +1,75 @@
+#experiences {
+  background-color: $color0;
+  padding: 50px 30px;
+  border-top: 5px solid $color2;
+
+  .container {
+    min-height: 20vh;
+    @include center;
+    
+    .content {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      .xp {
+        border-top: 1px solid $color1;
+        padding: 30px 0;
+        width: 30%;
+        text-align: center;
+        position: relative;
+
+        span {
+          background-color: $color2;
+          color: $color0;
+          font-weight: bold;
+          letter-spacing: 3px;
+          padding: 0 20px;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+
+  }
+  // RESPONSIVE MEDIUM ***********
+  @media screen and (max-width: 960px) and (max-height: 540px) {
+    padding: 50px 10px;
+    .container .content .xp {
+      h3 {
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  // RESPONSIVE MOBILE ***********
+  @media screen and (max-width: 480px) and (max-height: 854px) {
+
+    .container .content {
+      flex-direction: column;
+      .xp {
+        width: 100%;
+
+        &:nth-child(2) {
+          margin: 70px 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 320px) {
+    padding: 50px 10px;
+    .container .content .xp {
+      h3 {
+        font-size: 0.8rem;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}

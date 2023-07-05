@@ -1,0 +1,75 @@
+#contact {
+  @include center;
+  .container {
+    width: 50%;
+    text-align: center;
+    h2 {
+      margin: 30px 0;
+      font-weight: 400;
+      @include center;
+    }
+    form {
+      padding: 50px 0;
+      display: grid;
+      grid-template-areas: 
+      "a a b b"
+      "c c c c"
+      ". d d .";
+      gap: 10px;
+      div {
+        label {
+          display: block;
+          margin-bottom: 20px;
+        }
+        input, textarea {
+          width: 100%;
+          border: 1px solid $color3;
+          border-radius: 10px;
+          padding: 15px;
+        }
+        input {
+          height: 50px;
+        }
+        textarea {
+          height: 300px;
+        }
+      }
+      .name {
+        grid-area: a;
+      }
+      .email {
+        grid-area: b;
+      }
+      .msg {
+        margin: 50px 0;
+        grid-area: c;
+      }
+      .submit {
+        grid-area: d;
+      }
+    }
+
+    // responsive 
+
+    @media screen and (max-width: 480px) {
+      width: 95%;
+      font-size: 1rem;
+        h2 {
+          font-weight: 300;
+        }
+        form {
+          padding: 20px 0;
+          grid-template-areas: 
+          "a a a a"
+          "b b b b"
+          "c c c c"
+          "c c c c"
+          ". d d .";
+
+          .email {
+            margin: 20px 0;
+          }
+        }
+    }
+  }
+}
